@@ -48,13 +48,13 @@ patchesStrategicMerge:
           path: /
           backend:
             service:
-              name: prod-jupyterlab-frontend-app01-001
+              name: jupyterlab-frontend-app01-001
               port:
                 number: 8888
         - pathType: Prefix
           path: /login(.*)
           backend:
             service:
-              name: prod-jupyterlab-frontend-app01-001
+              name: jupyterlab-frontend-app01-001
               port:
                 number: 8888
