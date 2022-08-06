@@ -1,19 +1,27 @@
-# ingress-aggregator
-Aggregate and manage ingress
-
-# Example(access control)
-
-```
-cd overlay/argocd
-```
-```
-GLOBALIP=1.1.1.1
-```
-```
-vi kustomization.yaml
-```
-```
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: monitoring
+bases:
+  - ../../base-tls
+transformers:
+  - transformer-label.yaml
+  - transformer-suffixprefix.yaml
 patchesStrategicMerge:
+- |-
+  apiVersion: cert-manager.io/v1
+  kind: ClusterIssuer
+  metadata:
+    name: cluster-issuer
+  spec:
+    acme:
+      email: aim4highergg@gmail.com
+      server: https://acme-v02.api.letsencrypt.org/directory
+      privateKeySecretRef:
+        name: cluster-issuer-secret
+      solvers:
+      - http01:
+          ingress:
+            class: nginx
 - |-
   apiVersion: networking.k8s.io/v1
   kind: Ingress
@@ -25,7 +33,7 @@ patchesStrategicMerge:
       nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
       nginx.ingress.kubernetes.io/ssl-passthrough: "true"
       ingress.kubernetes.io/ssl-redirect: "false"
-      nginx.ingress.kubernetes.io/whitelist-source-range: "${GLOBALIP}, 192.168.1.0/24"
+      nginx.ingress.kubernetes.io/whitelist-source-range: "192.168.1.0/24"
   spec:
     ingressClassName: nginx
     tls:
@@ -50,7 +58,4 @@ patchesStrategicMerge:
               name: argocd-server
               port:
                 number: 8080
-```
-```
-kubectl apply -k
-```
+
