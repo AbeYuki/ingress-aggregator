@@ -38,24 +38,16 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - argocd.aimhighergg.com
+        - grafana.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: argocd.aimhighergg.com
+    - host: grafana.aimhighergg.com
       http:
         paths:
         - pathType: Prefix
           path: /
           backend:
             service:
-              name: argocd-server
+              name: monitoring-frontend-grafana-app01-001
               port:
-                number: 8080
-        - pathType: Prefix
-          path: /login(.*)
-          backend:
-            service:
-              name: argocd-server
-              port:
-                number: 8080
-
+                number: 3000
