@@ -54,3 +54,18 @@ patchesStrategicMerge:
 ```
 kubectl apply -k
 ```
+
+# Note
+
+If your backend is an HTTPS or HTTP protocol, you'll also need to change the ingress annotations accordingly.
+バックエンドが HTTPS か HTTP protocol 場合、 ingress の annotations もそれに合わせて変更する必要があります。
+```
+metadata:
+  annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+```
+```
+metadata:
+  annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+```
