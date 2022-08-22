@@ -1,5 +1,12 @@
 # ingress-aggregator
 Aggregate and manage ingress
+https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-argocd&revision=true
+https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-argocd-api&revision=true
+https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-jupyterlab&revision=true
+https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-k8s-dashboard&revision=true
+https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-longhorn&revision=true
+https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-prometheus&revision=true
+https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-redmine&revision=true
 
 # Example(access control)
 
