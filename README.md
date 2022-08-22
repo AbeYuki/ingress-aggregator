@@ -1,12 +1,13 @@
 # ingress-aggregator
-Aggregate and manage ingress
-https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-argocd&revision=true
-https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-argocd-api&revision=true
-https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-jupyterlab&revision=true
-https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-k8s-dashboard&revision=true
-https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-longhorn&revision=true
-https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-prometheus&revision=true
-https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-redmine&revision=true
+Aggregate and manage ingress  
+  
+![argocd](https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-argocd&revision=true)  
+![argocd-api](https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-argocd-api&revision=true)  
+![jupyterlab](https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-jupyterlab&revision=true)  
+![k8s-dashboard](https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-k8s-dashboard&revision=true)  
+![longhorn](https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-longhorn&revision=true)  
+![prometheus](https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-prometheus&revision=true)  
+![redmine](https://argocd.aimhighergg.com/api/badge?name=ingress-aggregator-redmine&revision=true)  
 
 # Example(access control)
 
