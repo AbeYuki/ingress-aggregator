@@ -28,9 +28,7 @@ patchesStrategicMerge:
   metadata:
     name: ingress-tls
     annotations:
-      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
-      nginx.ingress.kubernetes.io/ssl-redirect: "false"
-      nginx.ingress.kubernetes.io/whitelist-source-range: "10.152.183.0/24"
+      nginx.ingress.kubernetes.io/whitelist-source-range: "192.168.1.1/24"
   spec:
     ingressClassName: nginx
     tls:
