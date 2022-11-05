@@ -29,7 +29,6 @@ patchesStrategicMerge:
     name: ingress-tls
     annotations:
       nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
-      enable-real-ip: "true"
       nginx.ingress.kubernetes.io/whitelist-source-range: "210.155.219.115/32"
   spec:
     ingressClassName: nginx
