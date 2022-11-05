@@ -14,7 +14,7 @@ patchesStrategicMerge:
     name: ingress
     annotations:
       kubernetes.io/tls-acme: "true"
-      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
       enable-real-ip: "true"
   spec:
     ingressClassName: nginx
