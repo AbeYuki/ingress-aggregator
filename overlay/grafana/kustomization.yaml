@@ -28,6 +28,7 @@ patchesStrategicMerge:
   metadata:
     name: ingress-tls
     annotations:
+      metallb.universe.tf/address-pool: production
       nginx.ingress.kubernetes.io/whitelist-source-range: "192.168.1.1/24,192.168.1.133/32"
   spec:
     ingressClassName: nginx
