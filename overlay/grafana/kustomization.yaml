@@ -28,7 +28,6 @@ patchesStrategicMerge:
   metadata:
     name: ingress-tls
     annotations:
-      kubernetes.io/tls-acme: "true"
       nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
       nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
       nginx.ingress.kubernetes.io/ssl-passthrough: "true"
