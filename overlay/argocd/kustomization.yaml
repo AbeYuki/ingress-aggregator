@@ -48,12 +48,12 @@ patchesStrategicMerge:
             service:
               name: argocd-server
               port:
-                number: 80
+                number: 443
         - pathType: Prefix
           path: /login(.*)
           backend:
             service:
               name: argocd-server
               port:
-                number: 80
+                number: 443
 
