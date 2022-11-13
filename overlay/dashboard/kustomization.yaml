@@ -44,6 +44,6 @@ patchesStrategicMerge:
           path: /
           backend:
             service:
-              name: k8s-dashboard-kubernetes-dashboard
+              name: kubernetes-dashboard
               port:
                 number: 443
