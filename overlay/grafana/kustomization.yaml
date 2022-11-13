@@ -28,13 +28,8 @@ patchesStrategicMerge:
   metadata:
     name: ingress-tls
     annotations:
-      nginx.ingress.kubernetes.io/configuration-snippet: |
-            more_set_headers "X-Forwarded-For $http_x_forwarded_for";
-      nginx.ingress.kubernetes.io/ssl-redirect: "false"
-      nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
-      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
-      nginx.ingress.kubernetes.io/whitelist-source-range: "192.168.1.0/24"
-      metallb.universe.tf/address-pool: production
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
   spec:
     ingressClassName: nginx
     tls:

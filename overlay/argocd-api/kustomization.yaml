@@ -13,7 +13,7 @@ patchesStrategicMerge:
   metadata:
     name: ingress
     annotations:
-      nginx.ingress.kubernetes.io/whitelist-source-range: "192.168.1.1/24"
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
   spec:
     ingressClassName: nginx
     rules:
