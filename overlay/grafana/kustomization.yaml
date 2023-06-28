@@ -48,10 +48,3 @@ patchesStrategicMerge:
               name: monitoring-frontend-grafana-app01-001
               port:
                 number: 80
-        - pathType: Prefix
-          path: /login(.*)
-          backend:
-            service:
-              name: monitoring-frontend-grafana-app01-001
-              port:
-                number: 80
