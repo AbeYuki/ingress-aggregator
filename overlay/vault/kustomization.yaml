@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: argocd
+namespace: vault
 bases:
   - ../../base-tls
 transformers:
@@ -30,7 +30,7 @@ patchesStrategicMerge:
     annotations:
       nginx.ingress.kubernetes.io/enable-cors: 'true'
       nginx.ingress.kubernetes.io/backend-protocol: 'HTTPS'
-      nginx.ingress.kubernetes.io/cors-allow-origin: "https://argocd.aimhighergg.com/"
+      nginx.ingress.kubernetes.io/cors-allow-origin: "https://vault.aimhighergg.com/"
       nginx.ingress.kubernetes.io/cors-expose-headers: '*, X-CustomResponseHeader'
       nginx.ingress.kubernetes.io/use-regex: 'true'
       nginx.ingress.kubernetes.io/whitelist-source-range: '192.168.1.1/24'
