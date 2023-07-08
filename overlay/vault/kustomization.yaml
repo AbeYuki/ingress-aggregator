@@ -48,6 +48,6 @@ patchesStrategicMerge:
           path: /
           backend:
             service:
-              name: v0-24-1-vault-ui
+              name: vault-ui
               port:
                 number: 8200
