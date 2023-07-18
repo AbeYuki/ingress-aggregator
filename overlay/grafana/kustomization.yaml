@@ -28,6 +28,10 @@ patchesStrategicMerge:
   metadata:
     name: ingress-tls
     annotations:
+      nginx.ingress.kubernetes.io/configuration-snippet: |
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $host;
+        proxy_pass_header Server;
       nginx.ingress.kubernetes.io/backend-protocol: HTTP
   spec:
     ingressClassName: nginx
