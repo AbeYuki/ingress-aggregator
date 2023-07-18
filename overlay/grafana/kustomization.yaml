@@ -27,10 +27,10 @@ patchesStrategicMerge:
   kind: Ingress
   metadata:
     name: ingress-tls
-    #annotations:
-    #  nginx.ingress.kubernetes.io/use-regex: "true"
-    #  nginx.ingress.kubernetes.io/backend-protocol: HTTP
-    #  nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: HTTP
+      nginx.ingress.kubernetes.io/cors-allow-origin: "https://grafana.aimhighergg.com/"
+      nginx.ingress.kubernetes.io/cors-expose-headers: '*, X-CustomResponseHeader'
   spec:
     ingressClassName: nginx
     tls:
