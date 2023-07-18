@@ -13,7 +13,6 @@ patchesStrategicMerge:
   metadata:
     name: ingress
     annotations:
-      nginx.ingress.kubernetes.io/use-regex: "true"
       nginx.ingress.kubernetes.io/backend-protocol: HTTP
       nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
   spec:
@@ -23,7 +22,7 @@ patchesStrategicMerge:
       http:
         paths:
         - pathType: Prefix
-          path: /login(.*)
+          path: /login
           backend:
             service:
               name: monitoring-frontend-grafana-app01-001
