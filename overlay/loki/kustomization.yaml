@@ -44,6 +44,6 @@ patchesStrategicMerge:
           path: /
           backend:
             service:
-              name: monitoring-frontend-loki-app01-001
+              name: monitoring-frontend-loki-read01-001
               port:
                 number: 3100
