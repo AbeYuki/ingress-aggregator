@@ -2,7 +2,7 @@ apiVersion: builtin
 kind: PrefixSuffixTransformer
 metadata:
   name: prefixsuffix-transformer
-prefix: loki-aimhighergg-com-
+prefix: loki-write-aimhighergg-com-
 suffix: "-001"
 fieldSpecs:
   - path: metadata/name
