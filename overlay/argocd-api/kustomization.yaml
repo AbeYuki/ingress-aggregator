@@ -15,8 +15,10 @@ patchesStrategicMerge:
     annotations:
       nginx.ingress.kubernetes.io/enable-cors: 'true'
       nginx.ingress.kubernetes.io/backend-protocol: 'HTTPS'
-      #nginx.ingress.kubernetes.io/cors-allow-origin: "https://argocd.aimhighergg.com/"
+      nginx.ingress.kubernetes.io/cors-allow-origin: "https://argocd.aimhighergg.com"
       nginx.ingress.kubernetes.io/cors-expose-headers: "*, X-CustomResponseHeader"
+      nginx.ingress.kubernetes.io/rewrite-target: /$2
+      nginx.ingress.kubernetes.io/use-regex: "true"
   spec:
     ingressClassName: nginx
     rules:
@@ -24,7 +26,7 @@ patchesStrategicMerge:
       http:
         paths:
         - pathType: Prefix
-          path: /api/badge
+          path: /api/badge(/|$)(.*)
           backend:
             service:
               name: argocd-server
