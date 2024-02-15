@@ -17,7 +17,6 @@ patchesStrategicMerge:
       nginx.ingress.kubernetes.io/backend-protocol: 'HTTPS'
       #nginx.ingress.kubernetes.io/cors-allow-origin: "https://argocd.aimhighergg.com/"
       nginx.ingress.kubernetes.io/cors-expose-headers: "*, X-CustomResponseHeader"
-      nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24,20.27.177.113/32
   spec:
     ingressClassName: nginx
     rules:
@@ -25,7 +24,7 @@ patchesStrategicMerge:
       http:
         paths:
         - pathType: Prefix
-          path: /api
+          path: /api/badge
           backend:
             service:
               name: argocd-server
