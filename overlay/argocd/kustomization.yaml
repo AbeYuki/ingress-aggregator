@@ -58,4 +58,10 @@ patchesStrategicMerge:
               name: argocd-server
               port:
                 number: 443
-
+        - pathType: Prefix
+          path: /api/v1/(.*)
+          backend:
+            service:
+              name: argocd-server
+              port:
+                number: 443
