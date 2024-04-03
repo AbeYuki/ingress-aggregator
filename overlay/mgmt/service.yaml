@@ -19,8 +19,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: grafana-external
+  name: prometheus-external
   namespace: management
 spec:
   type: ExternalName
-  externalName: monitoring-frontend-grafana-app01-001.monitoring.svc.cluster.local
+  externalName: monitoring-backend-prometheus-db01-001.monitoring.svc.cluster.local

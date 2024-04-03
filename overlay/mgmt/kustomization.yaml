@@ -59,9 +59,9 @@ patchesStrategicMerge:
               port:
                 number: 80
         - pathType: Prefix
-          path: /grafana(/|$)(.*)
+          path: /prometheus(/|$)(.*)
           backend:
             service:
-              name: grafana-external
+              name: prometheus-external
               port:
                 number: 80
