@@ -44,6 +44,6 @@ patchesStrategicMerge:
           path: /longhorn
           backend:
             service:
-              name: longhorn-frontend
+              name: longhorn-system/longhorn-frontend
               port:
                 number: 80
