@@ -51,3 +51,10 @@ patchesStrategicMerge:
               name: longhorn-external
               port:
                 number: 80
+        - pathType: Prefix
+          path: /argocd(/|$)(.*)
+          backend:
+            service:
+              name: argocd-external
+              port:
+                number: 80
