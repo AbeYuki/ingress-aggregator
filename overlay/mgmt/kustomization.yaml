@@ -52,7 +52,7 @@ patchesStrategicMerge:
               port:
                 number: 80
         - pathType: Prefix
-          path: /argocd/
+          path: /argocd(/|$)(.*)
           backend:
             service:
               name: argocd-external
