@@ -15,3 +15,12 @@ metadata:
 spec:
   type: ExternalName
   externalName: argocd-repo-server.argocd.svc.cluster.local
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana-external
+  namespace: management
+spec:
+  type: ExternalName
+  externalName: monitoring-frontend-grafana-app01-001.monitoring.svc.cluster.local

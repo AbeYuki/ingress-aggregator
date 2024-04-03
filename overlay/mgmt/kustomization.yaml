@@ -58,3 +58,10 @@ patchesStrategicMerge:
               name: argocd-external
               port:
                 number: 80
+        - pathType: Prefix
+          path: /grafana(/|$)(.*)
+          backend:
+            service:
+              name: grafana-external
+              port:
+                number: 80
