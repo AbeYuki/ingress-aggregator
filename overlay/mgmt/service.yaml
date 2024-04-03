@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: longhorn-external
+  namespace: management
+spec:
+  type: ExternalName
+  externalName: longhorn-system.longhorn-frontend.svc.cluster.local
