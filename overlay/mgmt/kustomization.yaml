@@ -31,7 +31,6 @@ patchesStrategicMerge:
     annotations:
       nginx.ingress.kubernetes.io/backend-protocol: HTTP
       nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
-      nginx.ingress.kubernetes.io/rewrite-target: /#/dashboard
   spec:
     ingressClassName: nginx
     tls:
@@ -43,7 +42,7 @@ patchesStrategicMerge:
       http:
         paths:
         - pathType: Prefix
-          path: /longhorn
+          path: /
           backend:
             service:
               name: longhorn-external
