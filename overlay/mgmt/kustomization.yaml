@@ -34,7 +34,7 @@ patchesStrategicMerge:
       nginx.ingress.kubernetes.io/rewrite-target: /
       nginx.ingress.kubernetes.io/add-base-url : "true"
       nginx.ingress.kubernetes.io/configuration-snippet: |
-        rewrite ^/longhorn /#/dashbarod break;
+        rewrite ^/longhorn/#/dashboard /#/dashbarod break;
   spec:
     ingressClassName: nginx
     tls:
