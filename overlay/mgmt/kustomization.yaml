@@ -57,4 +57,4 @@ patchesStrategicMerge:
             service:
               name: argocd-external
               port:
-                number: 80
+                number: 443
