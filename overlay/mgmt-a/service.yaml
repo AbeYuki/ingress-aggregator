@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: argocd-external
+  namespace: management
+spec:
+  type: ExternalName
+  externalName: argocd-repo-server.argocd.svc.cluster.local
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-external
+  namespace: management
+spec:
+  type: ExternalName
+  externalName: monitoring-backend-prometheus-db01-001.monitoring.svc.cluster.local
