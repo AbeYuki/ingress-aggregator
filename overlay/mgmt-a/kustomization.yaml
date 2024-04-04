@@ -32,8 +32,7 @@ patchesStrategicMerge:
       nginx.ingress.kubernetes.io/backend-protocol: HTTP
       nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
       nginx.ingress.kubernetes.io/use-regex: "true"
-      nginx.ingress.kubernetes.io/app-root: /login
-      nginx.ingress.kubernetes.io/rewrite-target: /$2
+      nginx.ingress.kubernetes.io/rewrite-target: /
   spec:
     ingressClassName: nginx
     tls:
@@ -45,14 +44,14 @@ patchesStrategicMerge:
       http:
         paths:
         - pathType: Prefix
-          path: /argocd(/|$)(.*)
+          path: /argocd
           backend:
             service:
               name: argocd-external
               port:
                 number: 80
         - pathType: Prefix
-          path: /prometheus(/|$)(.*)
+          path: /prometheus
           backend:
             service:
               name: prometheus-external
