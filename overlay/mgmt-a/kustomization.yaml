@@ -42,15 +42,15 @@ patchesStrategicMerge:
     - host: mgmt-a.aimhighergg.com
       http:
         paths:
-        - pathType: Exact
-          path: /argocd/
+        - pathType: Prefix
+          path: /argocd
           backend:
             service:
               name: argocd-external
               port:
                 number: 80
-        - pathType: Exact
-          path: /prometheus/
+        - pathType: Prefix
+          path: /prometheus
           backend:
             service:
               name: prometheus-external
