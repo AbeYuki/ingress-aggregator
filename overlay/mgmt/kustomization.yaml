@@ -29,7 +29,6 @@ patchesStrategicMerge:
   metadata:
     name: ingress-tls
     annotations:
-      nginx.ingress.kubernetes.io/backend-protocol: HTTP
       nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
       nginx.ingress.kubernetes.io/use-regex: "true"
       nginx.ingress.kubernetes.io/rewrite-target: /$2
@@ -56,7 +55,7 @@ patchesStrategicMerge:
             service:
               name: argocd-external
               port:
-                number: 80
+                number: 443
         - pathType: Prefix
           path: /prometheus(/|$)(.*)
           backend:
