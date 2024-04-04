@@ -33,8 +33,7 @@ patchesStrategicMerge:
       nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
       nginx.ingress.kubernetes.io/rewrite-target: /$2
       nginx.ingress.kubernetes.io/configuration-snippet: |
-        rewrite ^(/argocd)$ $1/ redirect;;
-        rewrite ^(/prometheus)$ $1/ redirect;;
+        rewrite ^(/argocd) https://mgmgt-a.aimhighergg.com/ permanent;
   spec:
     ingressClassName: nginx
     tls:
