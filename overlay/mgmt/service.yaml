@@ -14,7 +14,7 @@ metadata:
   namespace: management
 spec:
   type: ExternalName
-  externalName: argocd-repo-server.argocd.svc.cluster.local
+  externalName: argocd-server.argocd.svc.cluster.local
 ---
 apiVersion: v1
 kind: Service
