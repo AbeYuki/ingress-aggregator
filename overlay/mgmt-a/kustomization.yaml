@@ -44,14 +44,14 @@ patchesStrategicMerge:
       http:
         paths:
         - pathType: Prefix
-          path: /argocd
+          path: /argocd(/|$)(.*)
           backend:
             service:
               name: argocd-external
               port:
                 number: 80
         - pathType: Prefix
-          path: /prometheus
+          path: /prometheus(/|$)(.*)
           backend:
             service:
               name: prometheus-external
