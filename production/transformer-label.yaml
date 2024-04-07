@@ -4,8 +4,6 @@ metadata:
   name: label-transformer
 labels:
   environment: production
-  app.kubernetes.io/managed-by: github
-  app.kubernetes.io/created-by: controller-manager
   app.kubernetes.io/part-of: ingress-aggregator
 fieldSpecs:
 - path: metadata/labels

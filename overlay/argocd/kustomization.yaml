@@ -3,9 +3,6 @@ kind: Kustomization
 namespace: argocd
 bases:
   - ../../base-tls
-transformers:
-  - transformer-label.yaml
-  - transformer-suffixprefix.yaml
 patchesStrategicMerge:
 - |-
   apiVersion: cert-manager.io/v1
