@@ -2,7 +2,7 @@ apiVersion: builtin
 kind: PrefixSuffixTransformer
 metadata:
   name: prefixsuffix-transformer
-prefix: jupyterlab
+prefix: consul
 fieldSpecs:
   - path: metadata/name
   - path: spec/template/spec/containers/name

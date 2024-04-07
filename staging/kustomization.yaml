@@ -16,8 +16,8 @@ resources:
   - ../overlay/loki-write
   - ../overlay/loki-write-external
   - ../overlay/longhorn
-  - ../overlay/mgmt
-  - ../overlay/mgmt-a
+  #- ../overlay/mgmt
+  #- ../overlay/mgmt-a
   - ../overlay/mimir
   - ../overlay/minio-loki
   - ../overlay/minio-mimir
@@ -26,4 +26,5 @@ resources:
   - ../overlay/vault
 transformers:
   - transformer-label.yaml
+  #- transformer-namespace.yaml
   - transformer-suffixprefix.yaml

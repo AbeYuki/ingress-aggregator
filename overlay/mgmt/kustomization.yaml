@@ -4,6 +4,8 @@ namespace: management
 resources:
   - ../../base-tls
   - service.yaml
+transformers:
+  - transformer-suffixprefix.yaml
 patchesStrategicMerge:
 - |-
   apiVersion: cert-manager.io/v1

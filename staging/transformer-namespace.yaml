@@ -1,0 +1,10 @@
+apiVersion: builtin
+kind: NamespaceTransformer
+metadata:
+  name: not-important-to-example
+  namespace: test
+#setRoleBindingSubjects: none
+unsetOnly: false
+fieldSpecs:
+- kind: Namespace
+  create: true
