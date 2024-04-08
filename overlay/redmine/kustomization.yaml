@@ -5,7 +5,6 @@ resources:
   - ../../base-tls
 transformers:
   - transformer-suffixprefix.yaml  
-  - ingress-patch.yaml
 patchesStrategicMerge:
 - |-
   apiVersion: cert-manager.io/v1
