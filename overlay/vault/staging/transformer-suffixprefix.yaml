@@ -2,12 +2,10 @@ apiVersion: builtin
 kind: PrefixSuffixTransformer
 metadata:
   name: prefixsuffix-transformer
-prefix: staging-
+prefix: vault-
 fieldSpecs:
   - path: metadata/name
   - path: spec/acme/privateKeySecretRef/name
     kind: ClusterIssuer
-  - path: spec/tls/secretName
-    kind: Ingress
   - path: metadata/annotations/cert-manager.io\/cluster-issuer
     kind: Ingress

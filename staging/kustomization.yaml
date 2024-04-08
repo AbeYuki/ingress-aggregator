@@ -23,7 +23,7 @@ resources:
   - ../overlay/minio-mimir
   - ../overlay/prometheus
   - ../overlay/redmine
-  - ../overlay/vault
+  - ../overlay/vault/staging
 transformers:
   - transformer-label.yaml
   - transformer-suffixprefix.yaml

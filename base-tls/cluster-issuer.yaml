@@ -4,11 +4,11 @@ metadata:
   name: cluster-issuer
 spec:
   acme:
-    email: patchesstrategicmerge
+    email: aim4highergg@gmail.com
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cluster-issuer-secret
     solvers:
     - http01:
         ingress:
-          class: patchesstrategicmerge
+          class: nginx
