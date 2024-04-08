@@ -13,3 +13,5 @@ fieldSpecs:
     kind: Ingress
   - path: spec/rules/host
     kind: Ingress
+  - path: spec/tls/0/hosts/0
+    kind: Ingress

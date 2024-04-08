@@ -5,12 +5,6 @@ metadata:
 prefix: loki-write-
 fieldSpecs:
   - path: metadata/name
-  - path: spec/template/spec/containers/name
-    kind: Deployment
-  - path: spec/template/spec/containers/env/valueFrom/secretKeyRef/name
-    kind: Deployment
-  - path: spec/template/spec/imagePullSecrets/name
-    kind: Deployment
   - path: spec/acme/privateKeySecretRef/name
     kind: ClusterIssuer
   - path: spec/tls/secretName

@@ -1,7 +1,0 @@
-nameReference:
-- kind: Ingress
-  fieldSpecs:
-    - path: spec/rules/host
-      kind: Ingress
-    - path: spec/tls/secretName
-      kind: Ingress
