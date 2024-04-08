@@ -2,7 +2,7 @@ apiVersion: builtin
 kind: PrefixSuffixTransformer
 metadata:
   name: prefixsuffix-transformer
-prefix: mgmt-a-aimhighergg-com-
+prefix: mgmt-a-
 suffix: "-001"
 fieldSpecs:
   - path: metadata/name
@@ -17,4 +17,4 @@ fieldSpecs:
   - path: spec/tls/secretName
     kind: Ingress
   - path: metadata/annotations/cert-manager.io\/cluster-issuer
-    kins: Ingress
+    kind: Ingress

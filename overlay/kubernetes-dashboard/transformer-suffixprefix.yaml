@@ -2,7 +2,7 @@ apiVersion: builtin
 kind: PrefixSuffixTransformer
 metadata:
   name: prefixsuffix-transformer
-prefix: kubernetes-dashboard
+prefix: kubernetes-dashboard-
 fieldSpecs:
   - path: metadata/name
   - path: spec/template/spec/containers/name
@@ -16,4 +16,4 @@ fieldSpecs:
   - path: spec/tls/secretName
     kind: Ingress
   - path: metadata/annotations/cert-manager.io\/cluster-issuer
-    kins: Ingress
+    kind: Ingress

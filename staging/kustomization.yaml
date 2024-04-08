@@ -26,5 +26,4 @@ resources:
   - ../overlay/vault
 transformers:
   - transformer-label.yaml
-  #- transformer-namespace.yaml
   - transformer-suffixprefix.yaml

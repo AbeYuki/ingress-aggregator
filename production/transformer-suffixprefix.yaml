@@ -17,4 +17,4 @@ fieldSpecs:
   - path: spec/tls/secretName
     kind: Ingress
   - path: metadata/annotations/cert-manager.io\/cluster-issuer
-    kins: Ingress
+    kind: Ingress

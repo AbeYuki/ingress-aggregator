@@ -4,7 +4,8 @@ namespace: prod-redmine
 resources:
   - ../../base-tls
 transformers:
-  - transformer-suffixprefix.yaml
+  - transformer-suffixprefix.yaml  
+  - ingress-patch.yaml
 patchesStrategicMerge:
 - |-
   apiVersion: cert-manager.io/v1
@@ -32,9 +33,7 @@ patchesStrategicMerge:
   spec:
     ingressClassName: nginx
     tls:
-    - hosts:
-        - redmine.aimhighergg.com
-      secretName: tls-secret
+    - secretName: tls-secret
     rules:
     - host: redmine.aimhighergg.com
       http:

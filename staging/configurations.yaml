@@ -1,0 +1,10 @@
+namePrefix:
+- path: spec/rules/host
+  kind: Ingress
+- path: spec/tls/secretName
+  kind: Ingress
+nameSuffix:
+- path: spec/rules/host
+  kind: Ingress
+- path: spec/tls/secretName
+  kind: Ingress

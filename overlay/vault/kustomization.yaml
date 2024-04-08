@@ -36,9 +36,9 @@ patchesStrategicMerge:
   spec:
     ingressClassName: nginx
     tls:
-    - hosts:
-        - vault.aimhighergg.com
-      secretName: tls-secret
+    #- hosts:
+    #    - vault.aimhighergg.com
+    - secretName: tls-secret
     rules:
     - host: vault.aimhighergg.com
       http:
