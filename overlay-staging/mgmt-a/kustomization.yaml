@@ -1,0 +1,56 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: management
+resources:
+  - ../../base-tls
+  - service.yaml
+patchesStrategicMerge:
+- |-
+  apiVersion: cert-manager.io/v1
+  kind: ClusterIssuer
+  metadata:
+    name: cluster-issuer
+  spec:
+    acme:
+      email: aim4highergg@gmail.com
+      server: https://acme-v02.api.letsencrypt.org/directory
+      privateKeySecretRef:
+        name: cluster-issuer-secret
+      solvers:
+      - http01:
+          ingress:
+            class: nginx
+- |-
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: ingress-tls
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: 'HTTPS'
+      nginx.ingress.kubernetes.io/whitelist-source-range: 192.168.1.1/24
+      nginx.ingress.kubernetes.io/use-regex: "true"
+      nginx.ingress.kubernetes.io/rewrite-target: /$2
+  spec:
+    ingressClassName: nginx
+    tls:
+    - hosts:
+        - mgmt-a.aimhighergg.com
+      secretName: tls-secret
+    rules:
+    - host: mgmt-a.aimhighergg.com
+      http:
+        paths:
+        - pathType: Prefix
+          path: /argocd(/|$)(.*)
+          backend:
+            service:
+              name: argocd-external
+              port:
+                number: 443
+        - pathType: Prefix
+          path: /prometheus(/|$)(.*)
+          backend:
+            service:
+              name: prometheus-external
+              port:
+                number: 80

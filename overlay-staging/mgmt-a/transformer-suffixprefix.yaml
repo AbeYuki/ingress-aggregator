@@ -1,0 +1,14 @@
+apiVersion: builtin
+kind: PrefixSuffixTransformer
+metadata:
+  name: prefixsuffix-transformer
+prefix: mgmt-a-
+suffix: "-001"
+fieldSpecs:
+  - path: metadata/name
+  - path: spec/acme/privateKeySecretRef/name
+    kind: ClusterIssuer
+  - path: spec/tls/secretName
+    kind: Ingress
+  - path: metadata/annotations/cert-manager.io\/cluster-issuer
+    kind: Ingress
