@@ -34,10 +34,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - consul.aimhighergg.com
+        - staging.consul.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: consul.aimhighergg.com
+    - host: staging.consul.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

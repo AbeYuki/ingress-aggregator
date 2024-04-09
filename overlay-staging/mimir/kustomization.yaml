@@ -33,10 +33,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - mimir.aimhighergg.com
+        - staging.mimir.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: mimir.aimhighergg.com
+    - host: staging.mimir.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

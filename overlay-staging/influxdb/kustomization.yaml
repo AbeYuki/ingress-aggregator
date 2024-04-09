@@ -33,10 +33,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - influxdb.aimhighergg.com
+        - staging.influxdb.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: influxdb.aimhighergg.com
+    - host: staging.influxdb.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

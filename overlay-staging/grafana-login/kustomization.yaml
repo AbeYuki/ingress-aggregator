@@ -17,7 +17,7 @@ patchesStrategicMerge:
   spec:
     ingressClassName: nginx
     rules:
-    - host: grafana.aimhighergg.com
+    - host: staging.grafana.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

@@ -33,10 +33,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - minio-loki.aimhighergg.com
+        - staging.minio-loki.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: minio-loki.aimhighergg.com
+    - host: staging.minio-loki.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

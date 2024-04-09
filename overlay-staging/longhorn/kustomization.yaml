@@ -33,10 +33,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - longhorn.aimhighergg.com
+        - staging.longhorn.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: longhorn.aimhighergg.com
+    - host: staging.longhorn.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

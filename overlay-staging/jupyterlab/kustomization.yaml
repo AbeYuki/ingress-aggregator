@@ -33,7 +33,7 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - jupyterlab.aimhighergg.com
+        - staging.jupyterlab.aimhighergg.com
       secretName: tls-secret
     rules:
     - host: jupyterlab.aimhighergg.com
@@ -50,6 +50,6 @@ patchesStrategicMerge:
           path: /login(.*)
           backend:
             service:
-              name: jupyterlab-frontend-app01-001
+              name: staging.jupyterlab-frontend-app01-001
               port:
                 number: 8888

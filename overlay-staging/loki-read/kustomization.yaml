@@ -33,7 +33,7 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - loki-read.aimhighergg.com
+        - staging.loki-read.aimhighergg.com
       secretName: tls-secret
     rules:
     - host: loki-read.aimhighergg.com

@@ -32,10 +32,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - grafana.aimhighergg.com
+        - staging.grafana.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: grafana.aimhighergg.com
+    - host: staging.grafana.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

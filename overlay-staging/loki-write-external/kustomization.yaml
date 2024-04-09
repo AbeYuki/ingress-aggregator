@@ -18,7 +18,7 @@ patchesStrategicMerge:
   spec:
     ingressClassName: nginx
     rules:
-    - host: loki-write-external.aimhighergg.com
+    - host: staging.loki-write-external.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

@@ -19,7 +19,7 @@ patchesStrategicMerge:
   spec:
     ingressClassName: nginx
     rules:
-    - host: argocd.aimhighergg.com
+    - host: staging.argocd.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

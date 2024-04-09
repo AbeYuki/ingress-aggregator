@@ -33,10 +33,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - alertmanager.aimhighergg.com
+        - staging.alertmanager.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: alertmanager.aimhighergg.com
+    - host: staging.alertmanager.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

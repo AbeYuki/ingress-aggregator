@@ -37,10 +37,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - argocd.aimhighergg.com
+        - staging.argocd.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: argocd.aimhighergg.com
+    - host: staging.argocd.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

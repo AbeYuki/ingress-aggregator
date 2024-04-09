@@ -32,10 +32,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - dashboard.aimhighergg.com
+        - staging.dashboard.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: dashboard.aimhighergg.com
+    - host: staging.dashboard.aimhighergg.com
       http:
         paths:
         - pathType: Prefix
