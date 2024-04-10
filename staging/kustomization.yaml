@@ -23,6 +23,7 @@ resources:
   - ../overlay-staging/prometheus
   - ../overlay-staging/redmine
   - ../overlay-staging/vault
+  - ../overlay-staging/wiki-aimhighergg-com
 transformers:
   - transformer-label.yaml
   - transformer-suffixprefix.yaml
