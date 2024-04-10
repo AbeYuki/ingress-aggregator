@@ -37,10 +37,10 @@ patchesStrategicMerge:
     ingressClassName: nginx
     tls:
     - hosts:
-        - vault.aimhighergg.com
+        - staging.vault.aimhighergg.com
       secretName: tls-secret
     rules:
-    - host: vault.aimhighergg.com
+    - host: staging.vault.aimhighergg.com
       http:
         paths:
         - pathType: Prefix

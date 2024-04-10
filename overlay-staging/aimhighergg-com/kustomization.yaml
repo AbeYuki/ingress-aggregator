@@ -40,7 +40,7 @@ patches:
             - staging.aimhighergg.com
           secretName: tls-secret
         rules:
-        - host: www.aimhighergg.com
+        - host: staging.aimhighergg.com
           http:
             paths:
             - pathType: Prefix

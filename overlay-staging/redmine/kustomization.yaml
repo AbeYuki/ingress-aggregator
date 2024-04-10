@@ -32,9 +32,10 @@ patchesStrategicMerge:
   spec:
     ingressClassName: nginx
     tls:
-    - secretName: tls-secret
+        - staging.redmine.aimhighergg.com
+      secretName: tls-secret
     rules:
-    - host: redmine.aimhighergg.com
+    - host: staging.redmine.aimhighergg.com
       http:
         paths:
         - pathType: Prefix
