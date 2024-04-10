@@ -27,7 +27,7 @@ patchesStrategicMerge:
     name: ingress-tls
     annotations:
       nginx.ingress.kubernetes.io/backend-protocol: HTTPS
-      nginx.ingress.kubernetes.io/whitelist-source-range: "192.168.1.1/24"
+      nginx.ingress.kubernetes.io/whitelist-source-range: 183.76.178.36/32
   spec:
     ingressClassName: nginx
     tls:
