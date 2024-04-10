@@ -44,7 +44,7 @@ patches:
               path: /
               backend:
                 service:
-                  name: wikijs
+                  name: staging-aimhighergg-com-wikijs-001
                   port:
                     number: 80
                     
