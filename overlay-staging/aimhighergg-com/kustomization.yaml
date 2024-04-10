@@ -47,13 +47,13 @@ patches:
               path: /
               backend:
                 service:
-                  name: frontend-app01
+                  name: staging-aimhighergg-com-frontend-app01-001
                   port:
                     number: 80
             - pathType: Prefix
               path: /portfolio
               backend:
                 service:
-                  name: frontend-static03
+                  name: staging-aimhighergg-com-frontend-static03-001
                   port:
                     number: 80                    
