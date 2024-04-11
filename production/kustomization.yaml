@@ -1,29 +1,29 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../overlay-production/alertmanager
-  - ../overlay-production/argocd
-  - ../overlay-production/argocd-api
-  - ../overlay-production/argoworkflows
-  - ../overlay-production/consul
-  - ../overlay-production/grafana
-  - ../overlay-production/grafana-login
-  - ../overlay-production/influxdb
-  - ../overlay-production/jupyterlab
-  - ../overlay-production/kubernetes-dashboard
-  - ../overlay-production/loki-backend
-  - ../overlay-production/loki-read
-  - ../overlay-production/loki-write
-  - ../overlay-production/loki-write-external
-  - ../overlay-production/longhorn
-  - ../overlay-production/mgmt
-  - ../overlay-production/mgmt-a
-  - ../overlay-production/mimir
-  - ../overlay-production/minio-loki
-  - ../overlay-production/minio-mimir
-  - ../overlay-production/prometheus
-  - ../overlay-production/redmine
-  - ../overlay-production/vault
+  - ../overlay/alertmanager/production
+  - ../overlay/argocd/production
+  - ../overlay/argocd-api/production
+  - ../overlay/argoworkflows/production
+  - ../overlay/consul/production
+  - ../overlay/grafana/production
+  - ../overlay/grafana-login/production
+  - ../overlay/influxdb/production
+  - ../overlay/jupyterlab/production
+  - ../overlay/kubernetes-dashboard/production
+  - ../overlay/loki-backend/production
+  - ../overlay/loki-read/production
+  - ../overlay/loki-write/production
+  - ../overlay/loki-write-external/production
+  - ../overlay/longhorn/production
+  - ../overlay/mgmt/production
+  - ../overlay/mimir/production
+  - ../overlay/minio-loki/production
+  - ../overlay/minio-mimir/production
+  - ../overlay/prometheus/production
+  - ../overlay/redmine/production
+  - ../overlay/vault/production
+
 transformers:
   - transformer-label.yaml
   - transformer-suffixprefix.yaml
