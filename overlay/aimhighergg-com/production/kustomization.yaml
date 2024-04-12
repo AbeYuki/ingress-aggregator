@@ -22,7 +22,7 @@ patches:
         ingressClassName: nginx 
         tls:
         - hosts:
-            - wwww.aimhighergg.com
+            - www.aimhighergg.com
           secretName: tls-secret
         rules:
         - host: www.aimhighergg.com
