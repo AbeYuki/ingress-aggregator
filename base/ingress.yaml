@@ -4,13 +4,13 @@ metadata:
   name: ingress
 spec:
   rules:
-  - host: patchesstrategicmerge
+  - host: patches
     http:
       paths:
       - pathType: Prefix
         path: /
         backend:
           service:
-            name: patchesstrategicmerge
+            name: patches
             port:
               number: 80

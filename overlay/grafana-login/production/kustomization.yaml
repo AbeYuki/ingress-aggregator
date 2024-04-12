@@ -9,7 +9,7 @@ patches:
   - target:
       version: v1
       group: networking.k8s.io
-      name: ingress-tls
+      name: ingress
     patch: |-
       apiVersion: networking.k8s.io/v1
       kind: Ingress
