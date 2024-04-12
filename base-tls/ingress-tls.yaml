@@ -8,7 +8,7 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-      - patchesstrategicmerge
+      - patches
     secretName: tls-secret
   rules:
   - host: patchesstrategicmerge
@@ -18,6 +18,6 @@ spec:
         path: /
         backend:
           service:
-            name: patchesstrategicmerge
+            name: patches
             port:
               number: 80

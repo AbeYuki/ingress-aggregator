@@ -1,0 +1,29 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../overlay/alertmanager/production
+  - ../overlay/argocd/production
+  - ../overlay/argocd-api/production
+  - ../overlay/argoworkflows/production
+  - ../overlay/consul/production
+  - ../overlay/grafana/production
+  - ../overlay/grafana-login/production
+  - ../overlay/influxdb/production
+  - ../overlay/jupyterlab/production
+  - ../overlay/kubernetes-dashboard/production
+  - ../overlay/loki-backend/production
+  - ../overlay/loki-read/production
+  - ../overlay/loki-write/production
+  - ../overlay/loki-write-external/production
+  - ../overlay/longhorn/production
+  - ../overlay/mgmt/production
+  - ../overlay/mimir/production
+  - ../overlay/minio-loki/production
+  - ../overlay/minio-mimir/production
+  - ../overlay/prometheus/production
+  - ../overlay/redmine/production
+  - ../overlay/vault/production
+
+transformers:
+  - transformer-label.yaml
+  - transformer-suffixprefix.yaml
