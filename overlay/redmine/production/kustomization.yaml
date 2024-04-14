@@ -20,7 +20,8 @@ patches:
       spec:
         ingressClassName: nginx
         tls:
-        - secretName: tls-secret
+        - hosts:
+            - redmine.aimhighergg.com
         rules:
         - host: redmine.aimhighergg.com
           http:
