@@ -22,6 +22,7 @@ patches:
         tls:
         - hosts:
             - redmine.aimhighergg.com
+          secretName: tls-secret
         rules:
         - host: redmine.aimhighergg.com
           http:
