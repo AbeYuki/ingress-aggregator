@@ -1,0 +1,34 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: template
+resources:
+  - ../../../base-tls
+transformers:
+  - transformer-suffixprefix.yaml  
+patches:
+  - target:
+      version: v1
+      group: networking.k8s.io
+      name: ingress-tls
+    patch: |-
+      apiVersion: networking.k8s.io/v1
+      kind: Ingress
+      metadata:
+        name: ingress-tls
+        annotations:
+          nginx.ingress.kubernetes.io/backend-protocol: HTTP
+      spec:
+        ingressClassName: nginx
+        tls:
+        - secretName: tls-secret
+        rules:
+        - host: template
+          http:
+            paths:
+            - pathType: Prefix
+              path: /
+              backend:
+                service:
+                  name: tempate
+                  port:
+                    number: 80
