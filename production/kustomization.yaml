@@ -5,8 +5,8 @@ resources:
   - ../overlay/airflow/production
   - ../overlay/alertmanager/production
   - ../overlay/argocd/production
-  - ../overlay/argocd-api/production
-  - ../overlay/argoworkflows/production
+#  - ../overlay/argocd-api/production
+#  - ../overlay/argoworkflows/production
 #  - ../overlay/consul/production
   - ../overlay/grafana/production
   - ../overlay/grafana-login/production
