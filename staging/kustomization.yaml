@@ -1,31 +1,31 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../overlay/aimhighergg-com/staging
-  - ../overlay/airflow/staging
-  - ../overlay/alertmanager/staging
+#  - ../overlay/aimhighergg-com/staging
+#  - ../overlay/airflow/staging
+#  - ../overlay/alertmanager/staging
   - ../overlay/argocd/staging
-  - ../overlay/argocd-api/staging
-  - ../overlay/argoworkflows/staging
+#  - ../overlay/argocd-api/staging
+#  - ../overlay/argoworkflows/staging
   - ../overlay/consul/staging
   - ../overlay/grafana/staging
   - ../overlay/grafana-login/staging
-  - ../overlay/influxdb/staging
-  - ../overlay/jupyterlab/staging
-  - ../overlay/kubernetes-dashboard/staging
-  - ../overlay/loki-backend/staging
-  - ../overlay/loki-read/staging
-  - ../overlay/loki-write/staging
-  - ../overlay/loki-write-external/staging
+#  - ../overlay/influxdb/staging
+#  - ../overlay/jupyterlab/staging
+#  - ../overlay/kubernetes-dashboard/staging
+#  - ../overlay/loki-backend/staging
+#  - ../overlay/loki-read/staging
+#  - ../overlay/loki-write/staging
+#  - ../overlay/loki-write-external/staging
   - ../overlay/longhorn/staging
-  - ../overlay/mgmt/staging
-  - ../overlay/mimir/staging
-  - ../overlay/minio-loki/staging
-  - ../overlay/minio-mimir/staging
-  - ../overlay/prometheus/staging
-  - ../overlay/redmine/staging
+#  - ../overlay/mgmt/staging
+#  - ../overlay/mimir/staging
+#  - ../overlay/minio-loki/staging
+#  - ../overlay/minio-mimir/staging
+#  - ../overlay/prometheus/staging
+#  - ../overlay/redmine/staging
   - ../overlay/vault/staging
-  - ../overlay/wiki-aimhighergg-com/staging
+#  - ../overlay/wiki-aimhighergg-com/staging
 
 transformers:
   - transformer-label.yaml
