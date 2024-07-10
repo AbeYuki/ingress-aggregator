@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: monitoring
+namespace: staging-monitoring
 resources:
   - ../../../base
 transformers:
@@ -28,6 +28,6 @@ patches:
               path: /login
               backend:
                 service:
-                  name: monitoring-frontend-grafana-app01-001
+                  name: staging-monitoring-frontend-grafana-app01-001
                   port:
                     number: 80
