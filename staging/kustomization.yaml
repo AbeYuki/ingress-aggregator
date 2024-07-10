@@ -8,8 +8,8 @@ resources:
 #  - ../overlay/argocd-api/staging
 #  - ../overlay/argoworkflows/staging
   - ../overlay/consul/staging
-#  - ../overlay/grafana/staging
-#  - ../overlay/grafana-login/staging
+  - ../overlay/grafana/staging
+  - ../overlay/grafana-login/staging
 #  - ../overlay/influxdb/staging
 #  - ../overlay/jupyterlab/staging
 #  - ../overlay/kubernetes-dashboard/staging
