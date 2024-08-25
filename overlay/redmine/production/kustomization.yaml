@@ -31,6 +31,6 @@ patches:
               path: /
               backend:
                 service:
-                  name: prod-redmine-frontend-app01-001
+                  name: redmine-frontend-app01-001
                   port:
                     number: 80
