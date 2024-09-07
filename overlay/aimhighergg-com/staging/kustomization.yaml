@@ -16,8 +16,6 @@ patches:
       kind: Ingress
       metadata:
         name: ingress-tls
-        annotations:
-          nginx.ingress.kubernetes.io/permanent-redirect: https://maintenance.aimhighergg.com
       spec:
         ingressClassName: nginx 
         tls:
