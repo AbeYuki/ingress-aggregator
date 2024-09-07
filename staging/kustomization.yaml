@@ -19,6 +19,7 @@ resources:
 #  - ../overlay/loki-write-external/staging
   - ../overlay/longhorn/staging
   - ../overlay/maintenance/staging
+#  - ../overlay/maintenance-redirect/staging
 #  - ../overlay/mgmt/staging
 #  - ../overlay/mimir/staging
 #  - ../overlay/minio-loki/staging
