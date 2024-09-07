@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: staging-aimhighergg-com
 resources:
   - ../../../base-tls
+  - service.yaml
 transformers:
   - transformer-suffixprefix.yaml
 patches:
@@ -31,7 +32,7 @@ patches:
               path: /
               backend:
                 service:
-                  name: staging-aimhighergg-com-frontend-app01-001
+                  name: maintenance
                   port:
                     number: 80
             - pathType: Prefix
