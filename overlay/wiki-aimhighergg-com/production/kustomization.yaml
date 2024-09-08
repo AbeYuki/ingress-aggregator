@@ -16,7 +16,7 @@ patches:
       metadata:
         name: ingress-tls
       spec:
-        ingressClassName: nginx-service
+        ingressClassName: nginx
         tls:
         - hosts:
             - wiki.aimhighergg.com

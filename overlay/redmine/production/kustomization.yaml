@@ -18,7 +18,7 @@ patches:
         annotations:
           nginx.ingress.kubernetes.io/backend-protocol: HTTP
       spec:
-        ingressClassName: nginx-service
+        ingressClassName: nginx
         tls:
         - hosts:
             - redmine.aimhighergg.com
