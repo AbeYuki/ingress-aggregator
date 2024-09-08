@@ -18,7 +18,7 @@ patches:
         annotations:
           nginx.ingress.kubernetes.io/use-regex: "true"
           nginx.ingress.kubernetes.io/rewrite-target: /
-          nginx.ingress.kubernetes.io/permanent-redirect: https://maintenance.aimhighergg.com
+          nginx.ingress.kubernetes.io/permanent-redirect: https://www.aimhighergg.com/
       spec:
         ingressClassName: nginx 
         tls:
