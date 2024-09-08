@@ -16,6 +16,7 @@ patches:
       metadata:
         name: ingress-tls
         annotations:
+          nginx.ingress.kubernetes.io/use-regex: "true"
           nginx.ingress.kubernetes.io/rewrite-target: /
       spec:
         ingressClassName: nginx 
