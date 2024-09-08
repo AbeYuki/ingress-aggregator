@@ -2,7 +2,7 @@ apiVersion: builtin
 kind: PrefixSuffixTransformer
 metadata:
   name: prefixsuffix-transformer
-prefix: staging-aimhighergg-com-
+prefix: maintenance-aimhighergg-com-
 fieldSpecs:
   - path: metadata/name
   - path: spec/acme/privateKeySecretRef/name
