@@ -1,33 +1,35 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: staging-monitoring
+namespace: maintenance
 resources:
-  - ../../../base
+  - ../../../base-tls
 transformers:
   - transformer-suffixprefix.yaml
 patches:
   - target:
       version: v1
       group: networking.k8s.io
-      name: ingress
+      name: ingress-tls
     patch: |-
       apiVersion: networking.k8s.io/v1
       kind: Ingress
       metadata:
-        name: ingress
-        annotations:
-          nginx.ingress.kubernetes.io/backend-protocol: HTTP
-          nginx.ingress.kubernetes.io/whitelist-source-range: 183.76.178.36/32
+        name: ingress-tls
       spec:
         ingressClassName: nginx
+        tls:
+        - hosts:
+            - maintenance.aimhighergg.com
+          secretName: tls-secret
         rules:
-        - host: staging.grafana.aimhighergg.com
+        - host: maintenance.aimhighergg.com
           http:
             paths:
             - pathType: Prefix
-              path: /login
+              path: /
               backend:
                 service:
-                  name: staging-monitoring-frontend-grafana-app01-001
+                  name: maintenance 
                   port:
                     number: 80
+

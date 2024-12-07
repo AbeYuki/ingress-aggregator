@@ -2,14 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../overlay/aimhighergg-com/staging
-#  - ../overlay/airflow/staging
+  - ../overlay/aimhighergg-com/maintenance
+  - ../overlay/airflow/staging
 #  - ../overlay/alertmanager/staging
   - ../overlay/argocd/staging
 #  - ../overlay/argocd-api/staging
 #  - ../overlay/argoworkflows/staging
   - ../overlay/consul/staging
-#  - ../overlay/grafana/staging
-#  - ../overlay/grafana-login/staging
+  - ../overlay/grafana/staging
+  - ../overlay/grafana-login/staging
 #  - ../overlay/influxdb/staging
 #  - ../overlay/jupyterlab/staging
 #  - ../overlay/kubernetes-dashboard/staging
@@ -18,6 +19,8 @@ resources:
 #  - ../overlay/loki-write/staging
 #  - ../overlay/loki-write-external/staging
   - ../overlay/longhorn/staging
+  - ../overlay/maintenance/staging
+#  - ../overlay/maintenance-redirect/staging
 #  - ../overlay/mgmt/staging
 #  - ../overlay/mimir/staging
 #  - ../overlay/minio-loki/staging

@@ -1,9 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: staging-aimhighergg-com
+namespace: maintenance
 resources:
   - ../../../base-tls
-  - service.yaml
 transformers:
   - transformer-suffixprefix.yaml
 patches:
@@ -16,14 +15,18 @@ patches:
       kind: Ingress
       metadata:
         name: ingress-tls
+        annotations:
+          nginx.ingress.kubernetes.io/use-regex: "true"
+          nginx.ingress.kubernetes.io/rewrite-target: /
+          #nginx.ingress.kubernetes.io/permanent-redirect: https://www.aimhighergg.com/
       spec:
         ingressClassName: nginx 
         tls:
         - hosts:
-            - staging.aimhighergg.com
+            - www.aimhighergg.com
           secretName: tls-secret
         rules:
-        - host: staging.aimhighergg.com
+        - host: www.aimhighergg.com
           http:
             paths:
             - pathType: Prefix
@@ -33,10 +36,3 @@ patches:
                   name: maintenance
                   port:
                     number: 80
-            - pathType: Prefix
-              path: /portfolio
-              backend:
-                service:
-                  name: staging-aimhighergg-com-frontend-static03-001
-                  port:
-                    number: 80                    

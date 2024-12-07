@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: maintenance
+  namespace: staging-aimhighergg-com
+spec:
+  type: ExternalName
+  externalName: maintenance.maintenance.svc.cluster.local
