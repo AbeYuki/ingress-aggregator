@@ -17,6 +17,8 @@ patches:
         name: ingress-tls
         annotations:
           nginx.ingress.kubernetes.io/backend-protocol: HTTP
+          nginx.ingress.kubernetes.io/server-snippet: |
+            deny 61.205.98.89;
       spec:
         ingressClassName: nginx
         tls:
