@@ -4,6 +4,7 @@ resources:
   - ../overlay/aimhighergg-com/production
   - ../overlay/airflow/production
   - ../overlay/alertmanager/production
+  - ../overlay/argo-rollouts/production
   - ../overlay/argocd/production
 #  - ../overlay/argocd-api/production
 #  - ../overlay/argoworkflows/production
