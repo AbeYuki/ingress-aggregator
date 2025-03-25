@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-tls
+  annotations:
+    cert-manager.io/cluster-issuer: cluster-issuer-vault
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - patches
+    secretName: tls-secret
+  rules:
+  - host: patchesstrategicmerge
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: patches
+            port:
+              number: 80
