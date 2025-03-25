@@ -4,7 +4,7 @@ metadata:
   name: cluster-issuer-vault
 spec:
   acme:
-    server: https://vault-internal.vault.svc.cluster.local:8200/v1/pki_int/acme/directory
+    server: https://vault.vault.svc.cluster.local:8200/v1/pki_int/acme/directory
     privateKeySecretRef:
       name: vault-pki-acme-account-key
     solvers:
