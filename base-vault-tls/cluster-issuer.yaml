@@ -3,12 +3,12 @@ kind: ClusterIssuer
 metadata:
   name: cluster-issuer-vault
 spec:
-  acme:
-    email: aim4highergg@gmail.com
-    server: https://staging.vault.aimhighergg.com/v1/pki_int/acme/directory
-    privateKeySecretRef:
-      name: vault-pki-acme-account-key
-    solvers:
-    - http01:
-        ingress:
-          class: nginx
+  vault:
+    server: https://vault.vault.svc.cluster.local:8200
+    path: pki_int/
+    auth:
+      kubernetes:
+        mountPath: /v1/auth/kubernetes
+        role: argocd
+        serviceAccountRef:
+          name: argocd
