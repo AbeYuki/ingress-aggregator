@@ -8,7 +8,6 @@ spec:
   vault:
     server: https://staging.vault.aimhighergg.com
     path: pki_int/sign/intermidiate-role
-    caBundle: <VAULTCA | base64encode >
     auth:
       kubernetes:
         mountPath: /v1/auth/kubernetes
