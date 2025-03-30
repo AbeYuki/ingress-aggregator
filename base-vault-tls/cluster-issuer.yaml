@@ -8,7 +8,7 @@ spec:
   vault:
     server: https://vault.vault.svc.cluster.local:8200
     path: pki_int/sign/intermidiate-role
-    caBundle: <VAULTCA>
+    caBundle: <VAULTCA | base64encode >
     auth:
       kubernetes:
         mountPath: /v1/auth/kubernetes
