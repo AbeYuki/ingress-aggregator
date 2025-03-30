@@ -9,6 +9,6 @@ spec:
     auth:
       kubernetes:
         mountPath: /v1/auth/kubernetes
-        role: argocd
+        role: cert-manager
         serviceAccountRef:
-          name: argocd
+          name: cert-manager
