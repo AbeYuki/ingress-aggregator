@@ -5,7 +5,7 @@ metadata:
 spec:
   acme:
     email: aim4highergg@gmail.com
-    server: https://vault.vault.svc.cluster.local:8200/v1/pki_int/acme/directory
+    server: https://staging.vault.aimhighergg.com/v1/pki_int/acme/directory
     privateKeySecretRef:
       name: vault-pki-acme-account-key
     solvers:
