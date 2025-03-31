@@ -31,6 +31,6 @@ resources:
 #  - ../overlay/wiki-aimhighergg-com/staging
 
 transformers:
-  - transformer-annotations.yaml
+#  - transformer-annotations.yaml
   - transformer-label.yaml
   - transformer-suffixprefix.yaml
