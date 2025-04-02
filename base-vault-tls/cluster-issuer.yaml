@@ -6,7 +6,7 @@ metadata:
     avp.kubernetes.io/path: "secret/data/vault/mtls"
 spec:
   vault:
-    server: https://staging.vault.aimhighergg.com
+    server: https://vault.vault.svc.cluster.local:8200
     path: pki_int/sign/intermidiate-role
     auth:
       kubernetes:
