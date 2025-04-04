@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: longhorn-system
 resources:
-  - ../../../base-vault-tls
+  - ../../../base-vault-tls-staging
 transformers:
   - transformer-suffixprefix.yaml
 patches:
