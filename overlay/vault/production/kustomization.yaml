@@ -2,38 +2,37 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: vault
 resources:
-#  - ../../../base-tls
-  - ./ingress-mtls.yaml
-#transformers:
-#  - transformer-suffixprefix.yaml
-#patches:
-#  - target:
-#      version: v1
-#      group: networking.k8s.io
-#      name: ingress-tls
-#    patch: |-
-#      apiVersion: networking.k8s.io/v1
-#      kind: Ingress
-#      metadata:
-#        name: ingress-tls
-#        annotations:
-#          nginx.ingress.kubernetes.io/backend-protocol: 'HTTPS'
-#          nginx.ingress.kubernetes.io/whitelist-source-range: '192.168.1.1/24'
-#      spec:
-#        ingressClassName: nginx
-#        tls:
-#        - hosts:
-#            - vault.aimhighergg.com
-#          secretName: tls-secret
-#        rules:
-#        - host: vault.aimhighergg.com
-#          http:
-#            paths:
-#            - pathType: Prefix
-#              path: /
-#              backend:
-#                service:
-#                  name: vault-ui
-#                  port:
-#                    number: 8200
-#
+  - ../../../base-tls
+#  - ./ingress-mtls.yaml
+transformers:
+  - transformer-suffixprefix.yaml
+patches:
+  - target:
+      version: v1
+      group: networking.k8s.io
+      name: ingress-tls
+    patch: |-
+      apiVersion: networking.k8s.io/v1
+      kind: Ingress
+      metadata:
+        name: ingress-tls
+        annotations:
+          nginx.ingress.kubernetes.io/backend-protocol: 'HTTPS'
+          nginx.ingress.kubernetes.io/whitelist-source-range: '192.168.1.1/24'
+      spec:
+        ingressClassName: nginx
+        tls:
+        - hosts:
+            - vault.aimhighergg.com
+          secretName: tls-secret
+        rules:
+        - host: vault.aimhighergg.com
+          http:
+            paths:
+            - pathType: Prefix
+              path: /
+              backend:
+                service:
+                  name: vault-ui
+                  port:
+                    number: 8200
