@@ -40,28 +40,28 @@ patches:
                   port:
                     number: 80
             - path: /wp-login.php
-              pathType: Exact
+              pathType: ImplementationSpecific
               backend:
                 service:
                   name: dummy
                   port:
                     number: 80
             - path: /xmlrpc.php
-              pathType: Exact
+              pathType: ImplementationSpecific
               backend:
                 service:
                   name: dummy
                   port:
                     number: 80
             - path: /debug.log
-              pathType: Prefix
+              pathType: ImplementationSpecific
               backend:
                 service:
                   name: does-not-exist
                   port:
                     number: 80
             - path: /.git
-              pathType: Prefix
+              pathType: ImplementationSpecific
               backend:
                 service:
                   name: dummy
