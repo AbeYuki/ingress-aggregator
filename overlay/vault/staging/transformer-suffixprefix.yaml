@@ -11,3 +11,5 @@ fieldSpecs:
     kind: Ingress
   - path: metadata/annotations/cert-manager.io\/cluster-issuer
     kind: Ingress
+  - path: spec/servers/tls/credentioalName
+    kind: Gateway
