@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: vault
 resources:
   - ../../../base-tls
+#  - ./ingress-mtls.yaml
 transformers:
   - transformer-suffixprefix.yaml
 patches:
