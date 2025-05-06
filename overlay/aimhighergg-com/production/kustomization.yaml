@@ -39,13 +39,6 @@ patches:
                   name: www-aimhighergg-com-frontend-static03-001
                   port:
                     number: 80
-            - path: /wp-login.php
-              pathType: ImplementationSpecific
-              backend:
-                service:
-                  name: dummy
-                  port:
-                    number: 80
             - path: /xmlrpc.php
               pathType: ImplementationSpecific
               backend:
