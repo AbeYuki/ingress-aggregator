@@ -38,4 +38,32 @@ patches:
                 service:
                   name: www-aimhighergg-com-frontend-static03-001
                   port:
-                    number: 80                    
+                    number: 80
+            - path: /wp-login.php
+              pathType: Exact
+              backend:
+                service:
+                  name: dummy
+                  port:
+                    number: 80
+            - path: /xmlrpc.php
+              pathType: Exact
+              backend:
+                service:
+                  name: dummy
+                  port:
+                    number: 80
+            - path: /debug.log
+              pathType: Prefix
+              backend:
+                service:
+                  name: does-not-exist
+                  port:
+                    number: 80
+            - path: /.git
+              pathType: Prefix
+              backend:
+                service:
+                  name: dummy
+                  port:
+                    number: 80
