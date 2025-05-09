@@ -60,3 +60,10 @@ patches:
                   name: dummy
                   port:
                     number: 80
+            - path: /w/
+              pathType: ImplementationSpecific
+              backend:
+                service:
+                  name: dummy
+                  port:
+                    number: 80
