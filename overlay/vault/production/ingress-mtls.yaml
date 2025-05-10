@@ -8,6 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/auth-tls-secret: "vault-client-tls"
     nginx.ingress.kubernetes.io/auth-tls-verify-client: "on"
     nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
+    nginx.ingress.kubernetes.io/whitelist-source-range: '192.168.1.1/24'
 spec:
   ingressClassName: nginx
   rules:
