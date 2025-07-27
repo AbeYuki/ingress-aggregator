@@ -20,10 +20,10 @@ resources:
 #  - ../overlay/loki-write-external/production
   - ../overlay/longhorn/production
 #  - ../overlay/mgmt/production
-  - ../overlay/mimir/production
-  - ../overlay/minio-loki/production
-  - ../overlay/minio-mimir/production
-  - ../overlay/prometheus/production
+#  - ../overlay/mimir/production
+#  - ../overlay/minio-loki/production
+#  - ../overlay/minio-mimir/production
+#  - ../overlay/prometheus/production
   - ../overlay/redmine/production
   - ../overlay/vault/production
   - ../overlay/wiki-aimhighergg-com/production
