@@ -2,16 +2,16 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../overlay/aimhighergg-com/production
-  - ../overlay/airflow/production
-  - ../overlay/alertmanager/production
-  - ../overlay/argo-rollouts/production
+#  - ../overlay/airflow/production
+#  - ../overlay/alertmanager/production
+#  - ../overlay/argo-rollouts/production
   - ../overlay/argocd/production
 #  - ../overlay/argocd-api/production
 #  - ../overlay/argoworkflows/production
 #  - ../overlay/consul/production
   - ../overlay/grafana/production
   - ../overlay/grafana-login/production
-  - ../overlay/influxdb/production
+#  - ../overlay/influxdb/production
 #  - ../overlay/jupyterlab/production
 #  - ../overlay/kubernetes-dashboard/production
 #  - ../overlay/loki-backend/production
@@ -20,9 +20,9 @@ resources:
 #  - ../overlay/loki-write-external/production
   - ../overlay/longhorn/production
 #  - ../overlay/mgmt/production
-  - ../overlay/mimir/production
-  - ../overlay/minio-loki/production
-  - ../overlay/minio-mimir/production
+#  - ../overlay/mimir/production
+#  - ../overlay/minio-loki/production
+#  - ../overlay/minio-mimir/production
   - ../overlay/prometheus/production
   - ../overlay/redmine/production
   - ../overlay/vault/production
